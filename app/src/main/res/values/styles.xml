@@ -9,6 +9,11 @@
         <item name="android:textSize">@dimen/title</item>
     </style>
 
+    <style name="Text.H1">
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:textSize">@dimen/h1</item>
+    </style>
+
     <style name="Text.H2">
         <item name="android:fontFamily">@font/montserrat_medium</item>
         <item name="android:textSize">@dimen/h2</item>
@@ -20,5 +25,20 @@
         <item name="android:textSize">@dimen/button</item>
         <item name="android:letterSpacing">0</item>
         <item name="backgroundTint">@null</item>
+    </style>
+
+    <style name="ToolbarLayout">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="Toolbar">
+        <item name="titleTextAppearance">@style/Text.H1</item>
+        <item name="titleTextColor">@color/accent_800</item>
+        <item name="android:layout_marginTop">20dp</item>
+    </style>
+
+    <style name="Toolbar.Back">
+        <item name="navigationIcon">@drawable/ic_back</item>
+        <item name="navigationIconTint">@color/accent_600</item>
     </style>
 </resources>

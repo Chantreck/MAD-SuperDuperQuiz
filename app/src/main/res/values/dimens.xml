@@ -5,8 +5,12 @@
     <dimen name="margin_16">16dp</dimen>
 
     <dimen name="title">36sp</dimen>
+    <dimen name="h1">24sp</dimen>
     <dimen name="h2">20sp</dimen>
     <dimen name="button">16sp</dimen>
 
     <dimen name="button_radius">16dp</dimen>
+    <dimen name="input_radius">8dp</dimen>
+
+    <dimen name="toolbar_height">76dp</dimen>
 </resources>

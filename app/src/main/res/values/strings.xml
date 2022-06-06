@@ -6,4 +6,10 @@
 
     <string name="action_sign_in">Войти</string>
     <string name="action_sign_up">Зарегистрироваться</string>
+
+    <string name="toolbar_sign_in">Вход в аккаунт</string>
+    <string name="toolbar_sign_up">Регистрация</string>
+
+    <string name="input_nickname">Введите никнейм</string>
+    <string name="input_password">Введите пароль</string>
 </resources>
