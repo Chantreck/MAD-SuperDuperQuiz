@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <color android:color="@color/accent_600" />
+    </item>
+    <item android:gravity="center">
+        <layer-list>
+            <item
+                android:width="128dp"
+                android:height="128dp"
+                android:bottom="40dp"
+                android:drawable="@drawable/ic_logo"
+                android:gravity="center_horizontal" />
+            <item
+                android:drawable="@drawable/app_name"
+                android:gravity="bottom" />
+        </layer-list>
+    </item>
+</layer-list>

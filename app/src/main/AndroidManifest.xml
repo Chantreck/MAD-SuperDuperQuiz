@@ -11,7 +11,8 @@
         android:theme="@style/Theme.SuperDuperQuiz">
         <activity
             android:name=".AuthorizationActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.SuperDuperQuiz.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
