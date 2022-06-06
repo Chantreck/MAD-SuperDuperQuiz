@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">SuperDuperQuiz</string>
+
+    <string name="welcome_header">Добро пожаловать!</string>
+    <string name="welcome_text">Играйте в викторины других игроков и создавайте свои абсолютно бесплатно</string>
+
+    <string name="action_sign_in">Войти</string>
+    <string name="action_sign_up">Зарегистрироваться</string>
 </resources>
