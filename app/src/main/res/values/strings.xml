@@ -10,6 +10,9 @@
     <string name="toolbar_sign_in">Вход в аккаунт</string>
     <string name="toolbar_sign_up">Регистрация</string>
 
-    <string name="input_nickname">Введите никнейм</string>
-    <string name="input_password">Введите пароль</string>
+    <string name="label_nickname">Никнейм</string>
+    <string name="label_password">Пароль</string>
+
+    <string name="hint_nickname">Введите никнейм</string>
+    <string name="hint_password">Введите пароль</string>
 </resources>

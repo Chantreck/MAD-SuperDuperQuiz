@@ -7,35 +7,36 @@
     android:fitsSystemWindows="true"
     tools:context=".SignInActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <include
         android:id="@+id/signInToolbar"
-        style="@style/ToolbarLayout"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/toolbar_height"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        layout="@layout/view_toolbar" />
 
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/topAppBar"
-            style="@style/Toolbar.Back"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:title="@string/toolbar_sign_in" />
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textField"
+    <include
+        android:id="@+id/nickname"
+        layout="@layout/view_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/signInToolbar"
         android:layout_margin="@dimen/margin_16"
-        android:hint="@string/input_nickname" >
+        app:layout_constraintTop_toBottomOf="@id/signInToolbar" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/shape_input" />
+    <include
+        android:id="@+id/password"
+        layout="@layout/view_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        app:layout_constraintTop_toBottomOf="@id/nickname" />
 
-    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/authorizationSignUpButton"
+        style="@style/Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="@dimen/margin_48"
+        android:text="@string/action_sign_in"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ToolbarLayout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/toolbar_height">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        style="@style/Toolbar.Back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:title="@string/toolbar_sign_in" />
+
+</com.google.android.material.appbar.AppBarLayout>
