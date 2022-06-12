@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SuperDuperQuiz">
         <activity
-            android:name=".SignInActivity"
+            android:name=".ui.sign_in.SignInActivity"
             android:exported="false" />
         <activity
-            android:name=".AuthorizationActivity"
+            android:name=".ui.authorization.AuthorizationActivity"
             android:exported="true"
             android:theme="@style/Theme.SuperDuperQuiz.SplashScreen">
             <intent-filter>

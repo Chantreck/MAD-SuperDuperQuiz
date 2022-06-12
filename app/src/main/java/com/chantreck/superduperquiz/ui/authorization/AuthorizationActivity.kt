@@ -1,8 +1,10 @@
-package com.chantreck.superduperquiz
+package com.chantreck.superduperquiz.ui.authorization
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.chantreck.superduperquiz.R
+import com.chantreck.superduperquiz.ui.sign_in.SignInActivity
 import com.chantreck.superduperquiz.databinding.ActivityAuthorizationBinding
 
 class AuthorizationActivity : AppCompatActivity() {
