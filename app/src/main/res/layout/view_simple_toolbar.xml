@@ -8,9 +8,9 @@
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
-        style="@style/Toolbar.Back"
+        style="@style/Toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:title="@string/toolbar_sign_in" />
+        tools:title="@string/toolbar_quiz_list" />
 
 </com.google.android.material.appbar.AppBarLayout>

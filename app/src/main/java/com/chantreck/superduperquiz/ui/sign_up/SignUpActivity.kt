@@ -2,16 +2,15 @@ package com.chantreck.superduperquiz.ui.sign_up
 
 import android.content.Intent
 import android.os.Bundle
-import android.text.InputType
-import android.widget.EditText
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.chantreck.superduperquiz.R
 import com.chantreck.superduperquiz.databinding.ActivitySignUpBinding
-import com.chantreck.superduperquiz.hideError
-import com.chantreck.superduperquiz.showError
+import com.chantreck.superduperquiz.ui.clearStack
+import com.chantreck.superduperquiz.ui.hideError
+import com.chantreck.superduperquiz.ui.hub.HubActivity
+import com.chantreck.superduperquiz.ui.showError
 import com.chantreck.superduperquiz.ui.sign_in.SignInActivity
-import com.google.android.material.textfield.TextInputLayout
 
 class SignUpActivity : AppCompatActivity() {
     private val binding by lazy { ActivitySignUpBinding.inflate(layoutInflater) }
@@ -84,7 +83,9 @@ class SignUpActivity : AppCompatActivity() {
         }
 
         viewModel.isSignUpSuccessful.observe(this) {
-            //TODO
+            val intent = Intent(this, HubActivity::class.java)
+            intent.clearStack()
+            startActivity(intent)
         }
     }
 }
