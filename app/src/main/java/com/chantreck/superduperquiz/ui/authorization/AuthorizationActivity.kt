@@ -6,6 +6,7 @@ import android.os.Bundle
 import com.chantreck.superduperquiz.R
 import com.chantreck.superduperquiz.ui.sign_in.SignInActivity
 import com.chantreck.superduperquiz.databinding.ActivityAuthorizationBinding
+import com.chantreck.superduperquiz.ui.sign_up.SignUpActivity
 
 class AuthorizationActivity : AppCompatActivity() {
     private val binding by lazy { ActivityAuthorizationBinding.inflate(layoutInflater) }
@@ -17,6 +18,11 @@ class AuthorizationActivity : AppCompatActivity() {
 
         binding.authorizationSignInButton.setOnClickListener {
             val intent = Intent(this, SignInActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.authorizationSignUpButton.setOnClickListener {
+            val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
         }
     }

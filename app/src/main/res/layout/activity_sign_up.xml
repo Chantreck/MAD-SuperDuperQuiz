@@ -5,36 +5,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".ui.sign_in.SignInActivity">
+    tools:context=".ui.sign_up.SignUpActivity">
 
     <include
-        android:id="@+id/signInToolbar"
+        android:id="@+id/signUpToolbar"
         layout="@layout/view_toolbar" />
 
     <include
-        android:id="@+id/nickname"
+        android:id="@+id/signUpNickname"
         layout="@layout/view_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_16"
-        app:layout_constraintTop_toBottomOf="@id/signInToolbar" />
+        app:layout_constraintTop_toBottomOf="@id/signUpToolbar" />
 
     <include
-        android:id="@+id/password"
+        android:id="@+id/signUpPassword"
         layout="@layout/view_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_16"
-        app:layout_constraintTop_toBottomOf="@id/nickname" />
+        app:layout_constraintTop_toBottomOf="@id/signUpNickname" />
+
+    <include
+        android:id="@+id/signUpRepeatPassword"
+        layout="@layout/view_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        app:layout_constraintTop_toBottomOf="@id/signUpPassword" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/signInButton"
+        android:id="@+id/signUpButton"
         style="@style/Button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="@dimen/margin_16"
+        android:text="@string/action_sign_up"
+        app:layout_constraintBottom_toTopOf="@id/haveAccountButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/haveAccountButton"
+        style="@style/SecondaryButton"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/secondary_button_height"
+        android:layout_marginHorizontal="16dp"
         android:layout_marginBottom="@dimen/margin_48"
-        android:text="@string/action_sign_in"
+        android:text="@string/action_have_account"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

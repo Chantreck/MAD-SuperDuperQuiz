@@ -10,10 +10,12 @@
     <dimen name="h2">20sp</dimen>
     <dimen name="button">16sp</dimen>
     <dimen name="small">12sp</dimen>
-    <dimen name="error">8sp</dimen>
+    <dimen name="secondary_button">12sp</dimen>
+    <dimen name="error">10sp</dimen>
 
     <dimen name="button_radius">16dp</dimen>
     <dimen name="input_radius">8dp</dimen>
 
     <dimen name="toolbar_height">76dp</dimen>
+    <dimen name="secondary_button_height">20dp</dimen>
 </resources>

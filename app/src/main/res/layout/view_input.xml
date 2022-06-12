@@ -20,6 +20,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_8"
+        app:errorIconDrawable="@null"
+        app:errorTextColor="@color/error"
         app:layout_constraintTop_toBottomOf="@id/label">
 
         <com.google.android.material.textfield.TextInputEditText

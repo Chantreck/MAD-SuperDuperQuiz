@@ -1,6 +1,7 @@
 package com.chantreck.superduperquiz.ui.sign_in
 
 import android.os.Bundle
+import android.text.InputType
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.chantreck.superduperquiz.R
@@ -36,9 +37,10 @@ class SignInActivity : AppCompatActivity() {
         with(binding.password) {
             label.setText(R.string.label_password)
             editText.setHint(R.string.hint_password)
+            editText.inputType = InputType.TYPE_TEXT_VARIATION_PASSWORD
         }
 
-        binding.authorizationSignUpButton.setOnClickListener {
+        binding.signInButton.setOnClickListener {
             val nickname = binding.nickname.editText.text.toString().trim()
             val password = binding.password.editText.text.toString().trim()
 
@@ -61,7 +63,7 @@ class SignInActivity : AppCompatActivity() {
             }
         }
 
-        viewModel.isSignedIn.observe(this) {
+        viewModel.isSignInSuccessful.observe(this) {
             //TODO
         }
     }

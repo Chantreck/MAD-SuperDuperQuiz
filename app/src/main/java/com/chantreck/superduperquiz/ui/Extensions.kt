@@ -10,3 +10,7 @@ fun TextInputLayout.hideError() {
     this.error = null
     this.isErrorEnabled = false
 }
+
+fun String.validateNickname() = this.isNotEmpty()
+
+fun String.validatePassword() = this.length >= 6
