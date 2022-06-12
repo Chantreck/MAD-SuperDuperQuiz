@@ -10,6 +10,6 @@ class AuthorizationViewModel: ViewModel() {
     val isSignedIn: LiveData<Boolean> get() = _isSignedIn
 
     init {
-        _isSignedIn.value = SharedPreferences.getToken() == SharedPreferences.EMPTY_RESULT
+        _isSignedIn.value = SharedPreferences.getToken() != SharedPreferences.EMPTY_RESULT
     }
 }

@@ -7,6 +7,7 @@ import androidx.activity.viewModels
 import com.chantreck.superduperquiz.R
 import com.chantreck.superduperquiz.ui.sign_in.SignInActivity
 import com.chantreck.superduperquiz.databinding.ActivityAuthorizationBinding
+import com.chantreck.superduperquiz.ui.hub.HubActivity
 import com.chantreck.superduperquiz.ui.sign_up.SignUpActivity
 
 class AuthorizationActivity : AppCompatActivity() {
@@ -14,7 +15,7 @@ class AuthorizationActivity : AppCompatActivity() {
     private val viewModel by viewModels<AuthorizationViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
+        setTheme(R.style.Theme_SuperDuperQuiz)
         super.onCreate(savedInstanceState)
 
         viewModel.isSignedIn.observe(this) { isSignedIn ->
@@ -27,7 +28,6 @@ class AuthorizationActivity : AppCompatActivity() {
     }
 
     private fun initViews() {
-        setTheme(R.style.Theme_SuperDuperQuiz)
         setContentView(binding.root)
 
         binding.authorizationSignInButton.setOnClickListener {
