@@ -3,8 +3,8 @@ package com.chantreck.superduperquiz.ui.sign_in
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.chantreck.superduperquiz.validateNickname
-import com.chantreck.superduperquiz.validatePassword
+import com.chantreck.superduperquiz.ui.validateNickname
+import com.chantreck.superduperquiz.ui.validatePassword
 
 class SignInViewModel : ViewModel() {
     private val _validationState = MutableLiveData<SignInValidationUiState>()

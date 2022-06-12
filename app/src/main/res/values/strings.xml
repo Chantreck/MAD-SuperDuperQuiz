@@ -21,4 +21,11 @@
     <string name="error_nickname">Никнейм не может быть пустым</string>
     <string name="error_password">Пароль должен быть не короче 6 символов</string>
     <string name="error_repeat_password">Пароли не совпадают</string>
+
+    <string name="menu_quiz">Викторины</string>
+    <string name="menu_categories">Категории</string>
+    <string name="menu_rating">Рейтинг</string>
+    <string name="menu_profile">Профиль</string>
+
+
 </resources>

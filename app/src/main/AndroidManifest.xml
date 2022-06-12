@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SuperDuperQuiz">
         <activity
+            android:name=".ui.hub.HubActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.sign_up.SignUpActivity"
             android:exported="false" />
         <activity

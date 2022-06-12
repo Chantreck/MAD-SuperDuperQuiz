@@ -1,13 +1,16 @@
 package com.chantreck.superduperquiz.ui.sign_in
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.InputType
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.chantreck.superduperquiz.R
 import com.chantreck.superduperquiz.databinding.ActivitySignInBinding
-import com.chantreck.superduperquiz.hideError
-import com.chantreck.superduperquiz.showError
+import com.chantreck.superduperquiz.ui.clearStack
+import com.chantreck.superduperquiz.ui.hideError
+import com.chantreck.superduperquiz.ui.showError
+import com.chantreck.superduperquiz.ui.hub.HubActivity
 
 class SignInActivity : AppCompatActivity() {
     private val binding by lazy { ActivitySignInBinding.inflate(layoutInflater) }
@@ -64,7 +67,9 @@ class SignInActivity : AppCompatActivity() {
         }
 
         viewModel.isSignInSuccessful.observe(this) {
-            //TODO
+            val intent = Intent(this, HubActivity::class.java)
+            intent.clearStack()
+            startActivity(intent)
         }
     }
 }

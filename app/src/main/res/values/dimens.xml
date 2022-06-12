@@ -11,6 +11,7 @@
     <dimen name="button">16sp</dimen>
     <dimen name="small">12sp</dimen>
     <dimen name="secondary_button">12sp</dimen>
+    <dimen name="bottom_navigation_label">12sp</dimen>
     <dimen name="error">10sp</dimen>
 
     <dimen name="button_radius">16dp</dimen>
