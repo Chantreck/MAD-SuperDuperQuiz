@@ -10,6 +10,12 @@
 
     <string name="toolbar_sign_in">Вход в аккаунт</string>
     <string name="toolbar_sign_up">Регистрация</string>
+    <string name="toolbar_quiz_list">Викторины</string>
+    <string name="toolbar_categories">Категории</string>
+    <string name="toolbar_rating">Рейтинг</string>
+    <string name="toolbar_profile">Профиль</string>
+    <string name="toolbar_quiz">Викторина</string>
+    <string name="toolbar_results">Результаты</string>
 
     <string name="label_nickname">Никнейм</string>
     <string name="label_password">Пароль</string>
@@ -26,6 +32,6 @@
     <string name="menu_categories">Категории</string>
     <string name="menu_rating">Рейтинг</string>
     <string name="menu_profile">Профиль</string>
-
+    <string name="menu_add">Создать викторину</string>
 
 </resources>

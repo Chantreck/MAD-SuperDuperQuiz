@@ -40,7 +40,6 @@ class SignInActivity : AppCompatActivity() {
         with(binding.password) {
             label.setText(R.string.label_password)
             editText.setHint(R.string.hint_password)
-            editText.inputType = InputType.TYPE_TEXT_VARIATION_PASSWORD
         }
 
         binding.signInButton.setOnClickListener {
