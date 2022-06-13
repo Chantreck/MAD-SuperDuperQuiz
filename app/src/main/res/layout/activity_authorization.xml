@@ -7,6 +7,13 @@
     android:fitsSystemWindows="true"
     tools:context=".ui.authorization.AuthorizationActivity">
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_gradient_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/authorizationTitleTextView"
         style="@style/Text.Title"

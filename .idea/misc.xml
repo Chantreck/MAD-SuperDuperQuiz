@@ -16,12 +16,7 @@
         <entry key="..\:/Users/vladislav.netaev/AndroidStudioProjects/SuperDuperQuiz/app/src/main/res/layout/activity_sign_in.xml" value="0.16069221260815822" />
         <entry key="..\:/Users/vladislav.netaev/AndroidStudioProjects/SuperDuperQuiz/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3175" />
         <entry key="..\:/Users/vladislav.netaev/AndroidStudioProjects/SuperDuperQuiz/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.3175" />
-        <entry key="..\:/Users/vladn/Documents/GitHub/MAD-SuperDuperQuiz/app/src/main/res/drawable/ic_add.xml" value="0.2005" />
-        <entry key="..\:/Users/vladn/Documents/GitHub/MAD-SuperDuperQuiz/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2005" />
-        <entry key="..\:/Users/vladn/Documents/GitHub/MAD-SuperDuperQuiz/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.2005" />
-        <entry key="..\:/Users/vladn/Documents/GitHub/MAD-SuperDuperQuiz/app/src/main/res/drawable/shape_card.xml" value="0.2005" />
         <entry key="..\:/Users/vladn/Documents/GitHub/MAD-SuperDuperQuiz/app/src/main/res/layout/activity_authorization.xml" value="0.22" />
-        <entry key="..\:/Users/vladn/Documents/GitHub/MAD-SuperDuperQuiz/app/src/main/res/layout/activity_hub.xml" value="0.22" />
         <entry key="..\:/Users/vladn/Documents/GitHub/MAD-SuperDuperQuiz/app/src/main/res/layout/activity_sign_in.xml" value="0.22" />
         <entry key="..\:/Users/vladn/Documents/GitHub/MAD-SuperDuperQuiz/app/src/main/res/layout/activity_sign_up.xml" value="0.75" />
         <entry key="..\:/Users/vladn/Documents/GitHub/MAD-SuperDuperQuiz/app/src/main/res/layout/fragment_categories.xml" value="0.25" />
@@ -33,9 +28,6 @@
         <entry key="..\:/Users/vladn/Documents/GitHub/MAD-SuperDuperQuiz/app/src/main/res/layout/view_simple_toolbar.xml" value="0.67" />
         <entry key="..\:/Users/vladn/Documents/GitHub/MAD-SuperDuperQuiz/app/src/main/res/layout/view_toolbar.xml" value="0.75" />
         <entry key="..\:/Users/vladn/Documents/GitHub/MAD-SuperDuperQuiz/app/src/main/res/menu/menu_add.xml" value="0.25" />
-        <entry key="..\:/Users/vladn/Documents/GitHub/MAD-SuperDuperQuiz/app/src/main/res/menu/menu_main.xml" value="0.25" />
-        <entry key="..\:/Users/vladn/Documents/GitHub/MAD-SuperDuperQuiz/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2005" />
-        <entry key="..\:/Users/vladn/Documents/GitHub/MAD-SuperDuperQuiz/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2005" />
       </map>
     </option>
   </component>

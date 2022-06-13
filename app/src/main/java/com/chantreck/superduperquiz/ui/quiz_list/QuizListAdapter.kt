@@ -7,18 +7,18 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.chantreck.superduperquiz.R
-import com.chantreck.superduperquiz.data.QuizShortInfo
+import com.chantreck.superduperquiz.domain.dto.Quiz
 import com.chantreck.superduperquiz.databinding.ItemQuizBinding
 
 class QuizListAdapter(private val listener: QuizClickListener) :
-    ListAdapter<QuizShortInfo, QuizListAdapter.ViewHolder>(DIFF) {
+    ListAdapter<Quiz, QuizListAdapter.ViewHolder>(DIFF) {
 
     private companion object {
-        val DIFF = object : DiffUtil.ItemCallback<QuizShortInfo>() {
-            override fun areItemsTheSame(oldItem: QuizShortInfo, newItem: QuizShortInfo) =
+        val DIFF = object : DiffUtil.ItemCallback<Quiz>() {
+            override fun areItemsTheSame(oldItem: Quiz, newItem: Quiz) =
                 oldItem.id == newItem.id
 
-            override fun areContentsTheSame(oldItem: QuizShortInfo, newItem: QuizShortInfo) =
+            override fun areContentsTheSame(oldItem: Quiz, newItem: Quiz) =
                 oldItem == newItem
         }
     }
@@ -32,7 +32,7 @@ class QuizListAdapter(private val listener: QuizClickListener) :
             }
         }
 
-        fun bind(item: QuizShortInfo) = with(binding) {
+        fun bind(item: Quiz) = with(binding) {
             quizCardTitle.text = item.title
             quizCardDescription.text = item.description
             quizCardInfo.text = "${item.category} • ${item.difficulty}"

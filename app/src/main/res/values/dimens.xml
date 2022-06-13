@@ -26,4 +26,6 @@
 
     <dimen name="toolbar_height">76dp</dimen>
     <dimen name="secondary_button_height">20dp</dimen>
+
+    <dimen name="placeholder_image_size">112dp</dimen>
 </resources>

@@ -4,10 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.chantreck.superduperquiz.R
-import com.chantreck.superduperquiz.data.QuizShortInfo
+import com.chantreck.superduperquiz.domain.dto.Quiz
 import com.chantreck.superduperquiz.databinding.FragmentQuizListBinding
 
 class QuizListFragment : Fragment() {
@@ -15,7 +17,7 @@ class QuizListFragment : Fragment() {
     private val viewModel by viewModels<QuizListViewModel>()
 
     private val listener = object : QuizClickListener {
-        override fun onClick(quiz: QuizShortInfo) {
+        override fun onClick(quiz: Quiz) {
             //TODO("Not yet implemented")
         }
     }
@@ -38,21 +40,24 @@ class QuizListFragment : Fragment() {
 
         binding.quizListRecycler.adapter = adapter
         binding.quizListRecycler.addItemDecoration(QuizListDecorator())
-        mockRecycler()
+
+        setObservers()
     }
 
-    private fun mockRecycler() {
-        val list = List(5) { index ->
-            QuizShortInfo(
-                index.toString(),
-                "Викторина по Смешарикам",
-                "Викторина на знание лучшего детского мультфильма в истории человечества Смешариков!",
-                "мультфильмы",
-                "средняя",
-                "Владислав Нетаев"
-            )
-        }
+    private fun setObservers() {
+        viewModel.state.observe(viewLifecycleOwner) { state ->
+            if (state.error != null) {
+                Toast.makeText(activity, state.error, Toast.LENGTH_SHORT).show()
+            }
 
-        adapter.submitList(list)
+            if (state.isListEmpty) {
+                binding.quizListPlaceholder.root.isVisible = true
+                binding.quizListRecycler.isVisible = false
+            } else {
+                binding.quizListPlaceholder.root.isVisible = false
+                binding.quizListRecycler.isVisible = true
+                adapter.submitList(state.list)
+            }
+        }
     }
 }
