@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin_16"
+    android:background="@drawable/shape_card"
+    android:paddingHorizontal="@dimen/margin_16"
+    android:paddingVertical="@dimen/margin_12">
+
+    <TextView
+        android:id="@+id/quizCardTitle"
+        style="@style/Text.H3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/accent_800"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Викторина по Смешарикам" />
+
+    <TextView
+        android:id="@+id/quizCardDescription"
+        style="@style/Text.Subtext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_4"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/quizCardTitle"
+        tools:text="Викторина на знание лучшего детского мультфильма в истории человечества Смешариков!" />
+
+    <TextView
+        android:id="@+id/quizCardInfo"
+        style="@style/Text.Additional"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_4"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/quizCardDescription"
+        tools:text="мультфильмы • средняя сложность" />
+
+    <TextView
+        android:id="@+id/quizCardAuthor"
+        style="@style/Text.Additional"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/quizCardInfo"
+        tools:text="Владислав Нетаев" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

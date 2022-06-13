@@ -19,6 +19,26 @@
         <item name="android:textSize">@dimen/h2</item>
     </style>
 
+    <style name="Text.H3">
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textSize">@dimen/h3</item>
+    </style>
+
+    <style name="Text.H4">
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textSize">@dimen/h4</item>
+    </style>
+
+    <style name="Text.Subtext">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textSize">@dimen/subtext</item>
+    </style>
+
+    <style name="Text.Additional">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textSize">@dimen/additional</item>
+    </style>
+
     <style name="Text.Small">
         <item name="android:fontFamily">@font/montserrat_medium</item>
         <item name="android:textSize">@dimen/small</item>
@@ -71,5 +91,16 @@
         <item name="android:background">@drawable/shape_input</item>
         <item name="android:fontFamily">@font/montserrat_regular</item>
         <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="BottomNavigation">
+        <item name="itemTextAppearanceActive">@style/BottomNavigationLabel</item>
+        <item name="itemTextAppearanceInactive">@style/BottomNavigationLabel</item>
+        <item name="labelVisibilityMode">labeled</item>
+    </style>
+
+    <style name="BottomNavigationLabel">
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textSize">@dimen/bottom_navigation_label</item>
     </style>
 </resources>

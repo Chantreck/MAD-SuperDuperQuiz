@@ -1,13 +1,18 @@
 package com.chantreck.superduperquiz.ui.sign_in
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.InputType
+import android.util.Log
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.chantreck.superduperquiz.R
 import com.chantreck.superduperquiz.databinding.ActivitySignInBinding
-import com.chantreck.superduperquiz.hideError
-import com.chantreck.superduperquiz.showError
+import com.chantreck.superduperquiz.ui.clearStack
+import com.chantreck.superduperquiz.ui.hideError
+import com.chantreck.superduperquiz.ui.showError
+import com.chantreck.superduperquiz.ui.hub.HubActivity
 
 class SignInActivity : AppCompatActivity() {
     private val binding by lazy { ActivitySignInBinding.inflate(layoutInflater) }
@@ -37,7 +42,6 @@ class SignInActivity : AppCompatActivity() {
         with(binding.password) {
             label.setText(R.string.label_password)
             editText.setHint(R.string.hint_password)
-            editText.inputType = InputType.TYPE_TEXT_VARIATION_PASSWORD
         }
 
         binding.signInButton.setOnClickListener {
@@ -63,8 +67,16 @@ class SignInActivity : AppCompatActivity() {
             }
         }
 
-        viewModel.isSignInSuccessful.observe(this) {
-            //TODO
+        viewModel.state.observe(this) { state ->
+            if (state.isSignedIn) {
+                val intent = Intent(this, HubActivity::class.java)
+                intent.clearStack()
+                startActivity(intent)
+                return@observe
+            }
+
+            Toast.makeText(this, state.error, Toast.LENGTH_SHORT).show()
+            Log.e("SignInActivity", state.error ?: return@observe)
         }
     }
 }

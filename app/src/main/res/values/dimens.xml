@@ -3,18 +3,26 @@
     <dimen name="margin_48">48dp</dimen>
     <dimen name="margin_32">32dp</dimen>
     <dimen name="margin_16">16dp</dimen>
+    <dimen name="margin_12">12dp</dimen>
     <dimen name="margin_8">8dp</dimen>
+    <dimen name="margin_4">4dp</dimen>
 
     <dimen name="title">36sp</dimen>
     <dimen name="h1">24sp</dimen>
     <dimen name="h2">20sp</dimen>
+    <dimen name="h3">16sp</dimen>
+    <dimen name="h4">14sp</dimen>
+    <dimen name="subtext">14sp</dimen>
+    <dimen name="additional">12sp</dimen>
     <dimen name="button">16sp</dimen>
     <dimen name="small">12sp</dimen>
     <dimen name="secondary_button">12sp</dimen>
+    <dimen name="bottom_navigation_label">12sp</dimen>
     <dimen name="error">10sp</dimen>
 
     <dimen name="button_radius">16dp</dimen>
     <dimen name="input_radius">8dp</dimen>
+    <dimen name="card_radius">8dp</dimen>
 
     <dimen name="toolbar_height">76dp</dimen>
     <dimen name="secondary_button_height">20dp</dimen>
