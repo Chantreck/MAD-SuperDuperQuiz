@@ -17,7 +17,7 @@ class AuthController(private val handler: OnFailureHandler) {
         api.register(body).enqueue(object : Callback<AuthResponse> {
             override fun onResponse(call: Call<AuthResponse>, response: Response<AuthResponse>) {
                 if (response.isSuccessful) {
-                    response.body()?.let { onSuccess.invoke(it) }
+                    response.body()?.let { onSuccess(it) }
                 } else {
                     onFailure(response)
                 }

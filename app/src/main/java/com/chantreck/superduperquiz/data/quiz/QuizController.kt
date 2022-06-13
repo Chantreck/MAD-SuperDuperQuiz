@@ -17,7 +17,7 @@ class QuizController(private val handler: OnFailureHandler) {
                 response: Response<List<QuizResponse>>
             ) {
                 if (response.isSuccessful) {
-                    response.body()?.let { onSuccess.invoke(it) }
+                    response.body()?.let { onSuccess(it) }
                 } else {
                     onFailure(response)
                 }
