@@ -3,6 +3,8 @@ package com.chantreck.superduperquiz.ui.sign_in
 import android.content.Intent
 import android.os.Bundle
 import android.text.InputType
+import android.util.Log
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.chantreck.superduperquiz.R
@@ -65,10 +67,16 @@ class SignInActivity : AppCompatActivity() {
             }
         }
 
-        viewModel.isSignInSuccessful.observe(this) {
-            val intent = Intent(this, HubActivity::class.java)
-            intent.clearStack()
-            startActivity(intent)
+        viewModel.state.observe(this) { state ->
+            if (state.isSignedIn) {
+                val intent = Intent(this, HubActivity::class.java)
+                intent.clearStack()
+                startActivity(intent)
+                return@observe
+            }
+
+            Toast.makeText(this, state.error, Toast.LENGTH_SHORT).show()
+            Log.e("SignInActivity", state.error ?: return@observe)
         }
     }
 }

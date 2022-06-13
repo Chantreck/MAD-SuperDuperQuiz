@@ -3,17 +3,26 @@ package com.chantreck.superduperquiz.ui.sign_up
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.chantreck.superduperquiz.data.SharedPreferences
-import com.chantreck.superduperquiz.data.auth.UserInfo
+import com.chantreck.superduperquiz.data.retrofit.OnFailureHandler
+import com.chantreck.superduperquiz.domain.SignUpUseCase
+import com.chantreck.superduperquiz.ui.AuthUiState
 import com.chantreck.superduperquiz.ui.validateNickname
 import com.chantreck.superduperquiz.ui.validatePassword
 
 class SignUpViewModel : ViewModel() {
+    private val handler = object : OnFailureHandler {
+        override fun onFailure(message: String) {
+            val state = AuthUiState(false, message)
+            _state.value = state
+        }
+    }
+    private val useCase = SignUpUseCase(handler)
+
+    private val _state = MutableLiveData<AuthUiState>()
+    val state: LiveData<AuthUiState> get() = _state
+
     private val _validationState = MutableLiveData<SignUpValidationUiState>()
     val validationState: LiveData<SignUpValidationUiState> get() = _validationState
-
-    private val _isSignUpSuccessful = MutableLiveData<Boolean>()
-    val isSignUpSuccessful: LiveData<Boolean> get() = _isSignUpSuccessful
 
     fun signUp(nickname: String, password: String, repeatPassword: String) {
         val isNicknameCorrect = nickname.validateNickname()
@@ -31,11 +40,9 @@ class SignUpViewModel : ViewModel() {
     }
 
     private fun sendSignUpRequest(nickname: String, password: String) {
-        //TODO отправка запроса на сервер
-
-        val userInfo = UserInfo(nickname, password)
-        SharedPreferences.saveUserInfo(userInfo)
-
-        _isSignUpSuccessful.value = true
+        useCase.signUp(nickname, password) {
+            val state = AuthUiState(true)
+            _state.value = state
+        }
     }
 }

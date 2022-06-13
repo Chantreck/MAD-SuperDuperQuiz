@@ -3,17 +3,26 @@ package com.chantreck.superduperquiz.ui.sign_in
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.chantreck.superduperquiz.data.SharedPreferences
-import com.chantreck.superduperquiz.data.auth.UserInfo
+import com.chantreck.superduperquiz.data.retrofit.OnFailureHandler
+import com.chantreck.superduperquiz.domain.SignInUseCase
+import com.chantreck.superduperquiz.ui.AuthUiState
 import com.chantreck.superduperquiz.ui.validateNickname
 import com.chantreck.superduperquiz.ui.validatePassword
 
 class SignInViewModel : ViewModel() {
+    private val handler = object : OnFailureHandler {
+        override fun onFailure(message: String) {
+            val state = AuthUiState(false, message)
+            _state.value = state
+        }
+    }
+    private val useCase = SignInUseCase(handler)
+
+    private val _state = MutableLiveData<AuthUiState>()
+    val state: LiveData<AuthUiState> get() = _state
+
     private val _validationState = MutableLiveData<SignInValidationUiState>()
     val validationState: LiveData<SignInValidationUiState> get() = _validationState
-
-    private val _isSignedIn = MutableLiveData<Boolean>()
-    val isSignInSuccessful: LiveData<Boolean> get() = _isSignedIn
 
     fun signIn(nickname: String, password: String) {
         val isNicknameCorrect = nickname.validateNickname()
@@ -28,11 +37,9 @@ class SignInViewModel : ViewModel() {
     }
 
     private fun sendSignInRequest(nickname: String, password: String) {
-        //TODO отправка запроса на сервер
-
-        val userInfo = UserInfo(nickname, password)
-        SharedPreferences.saveUserInfo(userInfo)
-
-        _isSignedIn.value = true
+        useCase.signIn(nickname, password) {
+            val state = AuthUiState(true)
+            _state.value = state
+        }
     }
 }

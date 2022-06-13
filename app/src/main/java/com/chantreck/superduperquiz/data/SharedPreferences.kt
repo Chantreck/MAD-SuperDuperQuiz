@@ -3,7 +3,7 @@ package com.chantreck.superduperquiz.data
 import android.content.Context
 import android.content.Context.MODE_PRIVATE
 import android.content.SharedPreferences
-import com.chantreck.superduperquiz.data.auth.UserInfo
+import com.chantreck.superduperquiz.data.auth.dto.AuthResponse
 
 object SharedPreferences {
     private const val PREFERENCES = "SuperDuperQuiz"
@@ -16,11 +16,11 @@ object SharedPreferences {
         preferences = context.getSharedPreferences(PREFERENCES, MODE_PRIVATE)
     }
 
-    fun saveUserInfo(userInfo: UserInfo) {
+    fun saveUserInfo(authResponse: AuthResponse) {
         val instance = preferences ?: return
-        with (instance.edit()) {
-            putString(NICKNAME_KEY, userInfo.nickname)
-            putString(TOKEN_KEY, userInfo.token)
+        with(instance.edit()) {
+            putString(NICKNAME_KEY, authResponse.username)
+            putString(TOKEN_KEY, authResponse.token)
             apply()
         }
     }
