@@ -8,7 +8,7 @@ class HeaderInterceptor : Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
         val request = chain.request()
         val newRequest = request.newBuilder()
-            .header("Authorization", "Bearer " + SharedPreferences.getToken())
+            .header("Authorization", SharedPreferences.getToken())
             .build()
         return chain.proceed(newRequest)
     }
