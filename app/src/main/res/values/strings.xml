@@ -34,4 +34,6 @@
     <string name="menu_profile">Профиль</string>
     <string name="menu_add">Создать викторину</string>
 
+    <string name="placeholder_title">Ой!</string>
+    <string name="placeholder_description">Кажется, ещё не создано ни одной викторины. Создайте свою викторину, нажав на иконку сверху экрана!</string>
 </resources>

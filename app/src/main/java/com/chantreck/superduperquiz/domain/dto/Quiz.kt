@@ -18,6 +18,6 @@ fun QuizResponse.toRaw(): Quiz {
         description = description,
         category = category,
         difficulty = difficulty.translate,
-        authorNickname = "Unknown"
+        authorNickname = author
     )
 }
